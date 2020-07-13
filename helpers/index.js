@@ -11,12 +11,15 @@ const wordsArray = Object.keys(words)
 const getRandomElement = (list) =>
   list[Math.floor((Math.random() * list.length))]
 
-const getWordChoices = () => {
-  const first = getRandomElement(wordsArray)
-  const filteredArray = wordsArray.filter(word => word !== first)
-  const second = getRandomElement(filteredArray)
+const getWordChoices = (amount = 3) => {
+  const list = []
 
-  return [{ ...words[first], word: first }, { ...words[second], word: second }]
+  for (let i = 0; i < amount; i++) {
+    const filteredArray = wordsArray.filter(word => list.includes(word) === false)
+    list.push(getRandomElement(filteredArray))
+  }
+
+  return list.map(word => ({ ...words[word], word }))
 }
 
 module.exports = { words, wordsArray, getWordChoices, config }
