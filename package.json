@@ -1,0 +1,30 @@
+{
+  "name": "drawthis-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garretcharp/drawthis-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garretcharp/drawthis-backend/issues"
+  },
+  "homepage": "https://github.com/garretcharp/drawthis-backend#readme",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "hapi-plugin-websocket": "^2.3.0",
+    "ws": "^7.3.1"
+  }
+}
